@@ -228,7 +228,7 @@ module Pubid::Ieee
       if @edition[:month]
         month = @edition[:month]
         month = Date.parse(@edition[:month]).month if month.to_i.zero?
-        result += "-#{sprintf('%02d', month)}"
+        result += "-#{sprintf('%02d', month.to_i)}"
       end
       result += "-#{@edition[:day]}" if @edition[:day]
       result
